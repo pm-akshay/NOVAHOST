@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaHost — Cloud & VPS Hosting</title>
+  <meta name="description" content="NovaHost — Affordable cloud & VPS hosting. Fast, secure, scalable hosting for businesses and developers.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #6EE7B7;
+      --muted: #94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius: 14px;
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#071226 0%, #071226 45%, #081127 100%);
+      color:#e6eef8;
+      line-height:1.45;
+    }
+    a{color:inherit;text-decoration:none;}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px;}
+    header{
+      display:flex;justify-content:space-between;align-items:center;padding:18px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px;}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#032;box-shadow:0 6px 18px rgba(0,0,0,0.4);}
+    nav a{color:var(--muted);margin-left:18px;font-weight:600;}
+    nav a.cta{background:linear-gradient(90deg,var(--accent),#60a5fa);padding:10px 16px;border-radius:8px;color:#032;margin-left:18px;}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0;}
+    .hero .title{font-size:32px;font-weight:700;margin:6px 0 10px;}
+    .hero p.lead{color:var(--muted);margin:0 0 18px;}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+    .btn{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#032;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer;box-shadow:0 10px 30px rgba(99,102,241,0.08);}
+    .btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);}
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 6px 22px rgba(2,6,23,0.6);}
+    .features{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap;}
+    .feature{flex:1;min-width:180px;padding:12px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);}
+    .feature h4{margin:0 0 6px;font-size:14px;}
+    .feature p{margin:0;color:var(--muted);font-size:13px;}
+    .domain-box{display:flex;gap:8px;align-items:center;padding:10px;border-radius:10px;background:linear-gradient(180deg,#07192b,#041021);border:1px solid rgba(255,255,255,0.04);}
+    .domain-box input{flex:1;padding:12px;border-radius:8px;border:0;background:transparent;color:inherit;outline:none;}
+    .small{font-size:13px;color:var(--muted);}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0;}
+    .plan{padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:12px;}
+    .plan.popular{border:2px solid rgba(110,231,183,0.14);transform:translateY(-6px);box-shadow:0 14px 40px rgba(2,6,23,0.6);}
+    .plan .price{font-size:22px;font-weight:800;}
+    .plan ul{margin:8px 0 0;padding-left:18px;color:var(--muted);}
+    .plan .buy{margin-top:auto;}
+    .testimonials{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+    .testimonial{flex:1;min-width:220px;padding:18px;border-radius:12px;background:rgba(0,0,0,0.14);border:1px solid rgba(255,255,255,0.02);}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    form .full{grid-column:1 / -1;}
+    input,textarea,select{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;outline:none;font-size:14px;}
+    textarea{min-height:100px;resize:vertical;}
+    footer{margin-top:36px;padding:18px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;gap:18px;}
+      .pricing{grid-template-columns:1fr;align-items:stretch;}
+      form{grid-template-columns:1fr;}
+      nav a{display:none;}
+      nav a.cta{display:inline-block;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">N</div>
+        <div>
+          <div style="font-weight:700">NovaHost</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Cloud & VPS hosting</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Plans</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#pricing">Get Started</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1 class="title">Fast, Reliable Cloud Hosting for Your Projects</h1>
+        <p class="lead">Scale with SSD-backed cloud servers, predictable pricing, and 99.99% uptime.</p>
+
+        <div class="cta-row">
+          <button class="btn" onclick="scrollToSection('pricing')">View Plans</button>
+          <button class="btn alt" onclick="scrollToSection('contact')">Contact Sales</button>
+        </div>
+
+        <div class="features" id="features" style="margin-top:20px">
+          <div class="feature">
+            <h4>SSD NVMe Storage</h4>
+            <p>Blazing-fast disks for your applications.</p>
+          </div>
+          <div class="feature">
+            <h4>99.99% Uptime</h4>
+            <p>Reliable network and datacenter-grade hardware.</p>
+          </div>
+          <div class="feature">
+            <h4>Easy Billing</h4>
+            <p>Optional WHMCS integration or API-driven provisioning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <h2 style="margin:12px 0 4px">Plans & Pricing</h2>
+      <p class="small" style="margin:0 0 14px">Simple predictable pricing. All plans include SSD, full root access & hourly billing.</p>
+      <div class="pricing" aria-live="polite">
+        <div class="plan">
+          <div>
+            <div style="font-weight:700">Starter</div>
+            <div class="small">Small projects</div>
+          </div>
+          <div class="price">€2.49 <span class="small">/mo</span></div>
+          <ul>
+            <li>1 vCPU · 1 GB RAM · 20 GB NVMe</li>
+            <li>Full root access</li>
+            <li>Daily snapshots</li>
+          </ul>
+          <div class="buy"><button class="btn" onclick="orderPlan('Starter')">Order Starter</button></div>
+        </div>
+        <div class="plan popular">
+          <div>
+            <div style="font-weight:700">Business</div>
+            <div class="small">Most used</div>
+          </div>
+          <div class="price">€8.99 <span class="small">/mo</span></div>
+          <ul>
+            <li>2 vCPU · 4 GB RAM · 80 GB NVMe</li>
+            <li>Managed backups</li>
+            <li>Priority support</li>
+          </ul>
+          <div class="buy"><button class="btn" onclick="orderPlan('Business')">Order Business</button></div>
+        </div>
+        <div class="plan">
+          <div>
+            <div style="font-weight:700">Enterprise</div>
+            <div class="small">For large workloads</div>
+          </div>
+          <div class="price">€29.00 <span class="small">/mo</span></div>
+          <ul>
+            <li>8 vCPU · 32 GB RAM · 500 GB NVMe</li>
+            <li>Dedicated resources</li>
+            <li>Dedicated account manager</li>
+          </ul>
+          <div class="buy"><button class="btn" onclick="orderPlan('Enterprise')">Contact Sales</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section aria-label="testimonials">
+      <h3 style="margin:0 0 12px">What our customers say</h3>
+      <div class="testimonials">
+        <div class="testimonial card">"NovaHost made scaling easy — our app latency dropped by 40%." — Lina M., CTO</div>
+        <div class="testimonial card">"Excellent support and predictable pricing. Highly recommended." — Rohan S., Founder</div>
+        <div class="testimonial card">"Top performance and seamless provisioning with Hetzner servers." — Marco P., DevOps</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:28px">
+      <h3 style="margin:0 0 12px">Contact Sales</h3>
+      <p class="small" style="margin:0 0 12px">Questions about custom plans or migration? Send us a message.</p>
+      <div class="card" style="padding:18px">
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <input name="name" placeholder="Your name" required />
+          <input name="email" type="email" placeholder="Email address" required />
+          <input name="company" placeholder="Company (optional)" />
+          <textarea name="message" class="full" placeholder="How can we help?" required></textarea>
+          <div class="full" style="display:flex;gap:10px;justify-content:flex-end">
+            <button type="submit" class="btn">Send Message</button>
+            <button type="button" class="btn alt" onclick="openLiveChat()">Live Chat</button>
+          </div>
+        </form>
+        <div id="formMsg" style="margin-top:10px;color:var(--muted);font-size:14px"></div>
+      </div>
+    </
